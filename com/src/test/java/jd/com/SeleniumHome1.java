@@ -1,59 +1,55 @@
 package jd.com;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 
-public class SeleniumHome {
+public class SeleniumHome1 {
 	
-	//@Listeners(jd1.com.Listeners1.class)
 	
-	@Test(groups = {"Group1","Group2"})
+	@Test
 	public void setUp() {
 		
 		System.out.println("Driver Intialization");
 		
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver1 = new ChromeDriver();
 		
 		System.out.println("Browser opened");
 		
-		driver.navigate().to("https://facebook.com");
+		driver1.navigate().to("https://facebook.com");
 		
 		System.out.println("Getting page tittle");
 		
-		String s1 = driver.getTitle();
+		String s1 = driver1.getTitle();
 		
 		System.out.println("Tittle is: "+ s1);
-							driver.quit();
-		
+		driver1.quit();
+				
 	}
 	
-	@Test(groups = {"Group1","Group2"})
-	public void test11() {
+	@Test
+	public void test1() {
 		
 		System.out.println("test1");
 	}
 	
 	@Test
-	public void test22() {
+	public void test2() {
 		
 		System.out.println("test");
 	}
 	
 	@Test
-	public void test33() {
+	public void test3() {
 		
 		System.out.println("test3");
 	}
 	
 	@Test
-	public void test44() {
+	public void test4() {
 		
 		System.out.println("test4");
 	}
-
 
 }
